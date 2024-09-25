@@ -1,10 +1,11 @@
 <?php
 
-      $dbHost = 'localhost';
-      $dbUsername = 'root';
-      $dbPassword = '';
-      $dbName = 'formulario__cadastro';
+$host = 'junction.proxy.rlwy.net';
+$port = '13653';
+$username = 'root';
+$password = 'qkrpNAGYKwuaOKqABYNlarPtuPMjuWJW';
+$database = 'railway';
 
-      $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
-      
+$conexao = new mysqli($host, $username, $password, $database, $port);
+
 ?> 
