@@ -1,0 +1,48 @@
+aside, .classificação {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  margin: 3px;
+  font-size: 150%;
+  border-radius: 7px;
+  flex: 1 1 100vw;
+  height: 60px;
+  border-radius: 15px 15px 0px;
+  align-items: center;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  flex: 20 0 500px;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: calc(14vh - 20px);
+  margin: 3px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.classificação {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 60%;
+}
+
+@media only screen and (max-width: 923px) {
+  header {
+    order: 0;
+  }
+
+  main {
+    height: calc(100vh - 328px);
+    order: 1;
+  }
+
+  aside {
+    flex: 1 1 100vw;
+    height: 100px;
+    order: 2;
+  }
+}
+

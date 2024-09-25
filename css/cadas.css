@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to right, rgb(20, 147, 22), rgb(17, 54, 7));
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+header,
+nav {
+  display: flex;
+  margin: 3px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px 15px 0px;
+  color: white;
+}
+
+header {
+  flex: 1 1 100vw;
+  height: 60px;
+  border-radius: 15px 15px 0px;
+}
+
+header #logo {
+  flex: 0 1 200px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px 15px 0px;
+}
+
+#openMenu,
+#closeMenu {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 5px 0px 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  flex: 1 1 100vw;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav a {
+  margin: 3%;
+  font-size: 20pt;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.relatorio {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+aside {
+  margin: 3px;
+  width: 300px; /* Ajuste a largura conforme necessário */
+}
+
+.box {
+  color: white;
+  position: relative; /* Alterado de absolute para relative */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+
+fieldset, .search-section {              
+  margin-bottom: 5px;
+}
+
+legend {
+  border: 3px solid darkolivegreen;
+  padding: 5px;
+  background-color: darkolivegreen;
+  color: white;
+}
+
+.inputBox {
+  position: relative;/* Reduz o espaçamento entre campos */
+}
+
+.inputEquip {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 14px; /* Reduz o tamanho da fonte */
+  width: 100%;
+  letter-spacing: 1px; /* Ajusta o espaçamento das letras */
+}
+
+.labelInput {
+  transition: opacity 0.3s ease;
+}
+
+.labelInput[style*="display: none"] {
+  opacity: 0; /* Faz o rótulo ficar invisível */
+}
+
+.labelInput {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  font-size: 12px; /* Ajusta o tamanho da fonte das labels */
+}
+
+#data_engenharia {
+  border: none;
+  padding: 6px; /* Ajuste o padding */
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px; /* Reduza o tamanho da fonte */
+}
+
+#submit {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(20, 144, 22),
+    rgb(0, 0, 0)
+  );
+  width: 100%;
+  border: none;
+  padding: 10px; /* Reduza o padding */
+  color: white;
+  font-size: 14px; /* Reduza o tamanho da fonte */
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#submit:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(16, 110, 18),
+    rgb(0, 0, 0)
+  );
+}
+
+m-5 {
+  display: block;
+  margin-left: 3px;
+  flex: 1 1 100vw;
+}
+
+.table-bg {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  width: 1000px;
+}
+
+thead {
+  border: 1px solid;
+}
+
+@media only screen and (max-width: 1080px) {
+  header {
+    order: 0;
+  }
+
+  main {
+    height: calc(100vh - 330px);
+    order: 1;
+  }
+
+  aside {
+    flex: 1 1 100vw;
+    height: auto; /* Ajusta a altura conforme necessário */
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 717px) {
+  #openMenu,
+  #closeMenu {
+    display: block;
+  }
+
+  #openMenu {
+    margin-left: auto;
+  }
+
+  #closeMenu {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+  }
+
+  nav {
+    position: fixed;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+  }
+}
